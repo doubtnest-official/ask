@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -49,48 +51,51 @@
         </div>
 
         <!-- Main Header -->
-        <div class="header-header">
+        <header class="header-wrapper">
 
-            <div class="container header-inner">
+    <div class="container">
 
-                <!-- Logo -->
-                <div class="header-logo">
-                    <a href="index.html">
-                        <img src="assets/images/logo.png" alt="DoubtNest Logo">
-                    </a>
-                </div>
+        <!-- Logo Area -->
+        <!-- Logo Section -->
+<header class="logo-header">
 
-                <!-- Header Right -->
-                <div class="header-right">
+    <div class="container">
 
-                    <header class="header-wrapper">
-
-                        <div class="logo">
-                            <a href="index.html">
-                                Doubt<span>Nest</span>
-                            </a>
-                        </div>
-
-                        <div class="menu-toggle">
-                            ☰
-                        </div>
-
-                        <nav class="main-menu">
-                            <ul>
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">My Doubts</a></li>
-                                <li><a href="#">Bookmarks</a></li>
-                                <li><a href="#">Profile</a></li>
-                            </ul>
-                        </nav>
-
-                    </header>
-
-                </div>
-
-            </div>
-
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="https://res.cloudinary.com/v1l5mkew/image/upload/doubtnest_xyhpqg" alt="DoubtNest Logo">
+            </a>
         </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- Features/Menu Section -->
+<div class="features-menu">
+
+    <div class="container">
+
+        <div class="menu-toggle">
+            ☰
+        </div>
+
+        <nav class="main-menu">
+
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">My Doubts</a></li>
+                <li><a href="#">Bookmarks</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+</div>
 
      </div>
     <!-- End Header Wrapper -->
@@ -806,6 +811,12 @@ onAuthStateChanged(auth, (user) => {
 
 });
 
+</script>
+
+<script>
+document.querySelector(".menu-toggle").onclick=function(){
+    document.querySelector(".main-menu").classList.toggle("active");
+}
 </script>
 
 </body>
