@@ -1,0 +1,1 @@
+**DoubtNest** is an AI-powered doubt-solving platform where students get instant answers using Groq API and Gemini API or connect with human experts for detailed solutions. Upload images securely with Cloudinary for faster, smarter, and accurate learning.
