@@ -1,0 +1,93 @@
+```html
+<div class="container">
+
+    <div class="footer-grid">
+
+        <!-- About -->
+        <div>
+
+            <h3 class="footer-widget-title"
+                style="margin-left:10px;margin-top:4px;margin-bottom:2px;">
+                DoubtNest
+            </h3>
+
+            <p style="margin-left:10px;margin-right:10px;margin-bottom:10px;">
+                DoubtNest is a learning platform where students can ask questions,
+                get AI and expert answers, save notes, and improve their learning
+                journey together.
+            </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div style="display:none;">
+
+            <h3 class="footer-title">
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+                <li><a href="policy.html">Privacy Policy</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- Community -->
+        <div style="display:none;">
+
+            <h3 class="footer-title">
+                Community
+            </h3>
+
+            <ul class="footer-links">
+                <li><a href="ask-doubt.html">Ask a Doubt</a></li>
+                <li><a href="experts.html">Our Experts</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="bookmarks.html">Bookmarks</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- Follow -->
+        <div>
+
+            <h3 class="footer-title">
+                Follow Us
+            </h3>
+
+            <ul class="footer-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">Telegram</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom"
+     style="
+        background:#111827;
+        color:#9ca3af;
+        height:60px;
+        text-align:center;
+        padding-top:17px;
+        margin-top:10px;
+        box-sizing:border-box;
+     ">
+
+    © 2026 <strong>DoubtNest</strong>. All Rights Reserved.
+
+</div>
+```
