@@ -1,0 +1,445 @@
+/* =====================================
+   Global Variables
+===================================== */
+
+const monthFormat = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
+
+const noThumbnail = "assets/images/nth.png";
+
+const postPerPage = 7;
+const fixedSidebar = true;
+const commentsSystem = "blogger";
+const disqusShortname = "soratemplates";
+
+
+/* =====================================
+   Mobile Menu + Dropdowns
+===================================== */
+
+(() => {
+
+    const menuButton = document.querySelector(".slide-menu-toggle");
+    const menu = document.getElementById("main-menu");
+    const dropdownButtons =
+        document.querySelectorAll(".dropdown-toggle");
+
+    if (!menuButton || !menu) return;
+
+
+    /* Close dropdowns */
+
+    const closeDropdowns = (except = null) => {
+
+        dropdownButtons.forEach((button) => {
+
+            if (button !== except) {
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                button
+                    .closest(".has-sub")
+                    ?.classList.remove("is-open");
+            }
+
+        });
+
+    };
+
+
+    /* Main menu button */
+
+    menuButton.addEventListener("click", () => {
+
+        const isOpen =
+            menuButton.getAttribute("aria-expanded") === "true";
+
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+        );
+
+
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Open navigation menu"
+                : "Close navigation menu"
+        );
+
+
+        document.body.classList.toggle(
+            "nav-active",
+            !isOpen
+        );
+
+
+        if (isOpen) {
+            closeDropdowns();
+        }
+
+    });
+
+
+    /* Dropdown buttons */
+
+    dropdownButtons.forEach((button) => {
+
+        button.addEventListener("click", (event) => {
+
+            event.preventDefault();
+
+
+            const isOpen =
+                button.getAttribute("aria-expanded") === "true";
+
+
+            closeDropdowns(button);
+
+
+            button.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+
+
+            button
+                .closest(".has-sub")
+                ?.classList.toggle(
+                    "is-open",
+                    !isOpen
+                );
+
+        });
+
+    });
+
+
+    /* Click outside */
+
+    document.addEventListener("click", (event) => {
+
+        if (
+            !menu.contains(event.target) &&
+            !menuButton.contains(event.target)
+        ) {
+
+            closeDropdowns();
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+
+            document.body.classList.remove(
+                "nav-active"
+            );
+
+        }
+
+    });
+
+
+    /* Escape key */
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+
+            closeDropdowns();
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+
+            document.body.classList.remove(
+                "nav-active"
+            );
+
+
+            menuButton.focus();
+
+        }
+
+    });
+
+
+    /* Close after selecting a link */
+
+    menu.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            closeDropdowns();
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            document.body.classList.remove(
+                "nav-active"
+            );
+
+        });
+
+    });
+
+})();/* =====================================
+   Global Variables
+===================================== */
+
+const monthFormat = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
+
+const noThumbnail = "assets/images/nth.png";
+
+const postPerPage = 7;
+const fixedSidebar = true;
+const commentsSystem = "blogger";
+const disqusShortname = "soratemplates";
+
+
+/* =====================================
+   Mobile Menu + Dropdowns
+===================================== */
+
+(() => {
+
+    const menuButton = document.querySelector(".slide-menu-toggle");
+    const menu = document.getElementById("main-menu");
+    const dropdownButtons =
+        document.querySelectorAll(".dropdown-toggle");
+
+    if (!menuButton || !menu) return;
+
+
+    /* Close dropdowns */
+
+    const closeDropdowns = (except = null) => {
+
+        dropdownButtons.forEach((button) => {
+
+            if (button !== except) {
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                button
+                    .closest(".has-sub")
+                    ?.classList.remove("is-open");
+            }
+
+        });
+
+    };
+
+
+    /* Main menu button */
+
+    menuButton.addEventListener("click", () => {
+
+        const isOpen =
+            menuButton.getAttribute("aria-expanded") === "true";
+
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+        );
+
+
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Open navigation menu"
+                : "Close navigation menu"
+        );
+
+
+        document.body.classList.toggle(
+            "nav-active",
+            !isOpen
+        );
+
+
+        if (isOpen) {
+            closeDropdowns();
+        }
+
+    });
+
+
+    /* Dropdown buttons */
+
+    dropdownButtons.forEach((button) => {
+
+        button.addEventListener("click", (event) => {
+
+            event.preventDefault();
+
+
+            const isOpen =
+                button.getAttribute("aria-expanded") === "true";
+
+
+            closeDropdowns(button);
+
+
+            button.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+
+
+            button
+                .closest(".has-sub")
+                ?.classList.toggle(
+                    "is-open",
+                    !isOpen
+                );
+
+        });
+
+    });
+
+
+    /* Click outside */
+
+    document.addEventListener("click", (event) => {
+
+        if (
+            !menu.contains(event.target) &&
+            !menuButton.contains(event.target)
+        ) {
+
+            closeDropdowns();
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+
+            document.body.classList.remove(
+                "nav-active"
+            );
+
+        }
+
+    });
+
+
+    /* Escape key */
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+
+            closeDropdowns();
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+
+            document.body.classList.remove(
+                "nav-active"
+            );
+
+
+            menuButton.focus();
+
+        }
+
+    });
+
+
+    /* Close after selecting a link */
+
+    menu.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            closeDropdowns();
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            document.body.classList.remove(
+                "nav-active"
+            );
+
+        });
+
+    });
+
+})();
