@@ -1,0 +1,187 @@
+<!-- Header Wrapper -->
+<div id="header-wrap">
+
+    <!-- Top Secondary Menu -->
+    <div class="top-secondary-menu">
+
+        <div class="container row">
+
+            <div class="top-second-menu">
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="policy.html">Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="right-menu">
+                <ul>
+                    <li>
+                        <a href="mailto:support@doubtnest.com">
+                            <i class="fa fa-envelope"></i>
+                            support@doubtnest.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main Header -->
+    <header class="header-wrapper">
+
+        <div class="container">
+
+            <div class="header-main">
+
+                <!-- Logo -->
+                <a class="header-logo"
+                   href="index.html"
+                   aria-label="DoubtNest home">
+
+                    <img
+                        src="https://res.cloudinary.com/v1l5mkew/image/upload/doubtnest_xyhpqg"
+                        alt="DoubtNest Logo">
+
+                </a>
+
+
+                <!-- Menu Button -->
+                <button
+                    class="slide-menu-toggle"
+                    type="button"
+                    aria-controls="main-menu"
+                    aria-expanded="false"
+                    aria-label="Open navigation menu">
+
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+
+                </button>
+
+
+                <!-- Navigation -->
+                <nav id="main-menu" aria-label="Main navigation">
+
+                    <ul id="main-menu-nav">
+
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="latest-doubt-answers.html">
+                                <i class="fas fa-question-circle" aria-hidden="true"></i>
+                                My Doubts
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="user-bookmark-page.html">
+                                <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                Bookmarks
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-notification-page.html">
+                                <i class="fas fa-bell" aria-hidden="true"></i>
+                                Notifications
+                                <span id="notificationDot"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="profile.html">
+                                <i class="fas fa-user" aria-hidden="true"></i>
+                                My Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                About Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Announcement Bar -->
+    <div class="secondary-menu">
+
+        <div class="container">
+
+            <div class="marquee">
+
+                <div class="marquee-content">
+
+                    <ul>
+
+                        <li>
+                            <a href="ask-doubt.html">
+                                Ask your doubts for free!
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="ask-doubt.html">
+                                AI + Human doubt solving
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notifications.html">
+                                Check Important Notifications!!
+                            </a>
+                        </li>
+
+                        <!-- Duplicate for continuous loop -->
+
+                        <li>
+                            <a href="ask-doubt.html">
+                                Ask your doubts for free!
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="ask-doubt.html">
+                                AI + Human doubt solving
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="notifications.html">
+                                Check Important Notifications!!
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
