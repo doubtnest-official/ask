@@ -851,6 +851,62 @@ button, input, textarea, select{
     .header-menu{
         height: 40px;
     }
+
+    /* Hamburger button */
+.slide-menu-toggle {
+    position: relative;
+    width: 42px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Hamburger lines */
+.slide-menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    display: block;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+/* Turn hamburger into X when menu is open */
+.slide-menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.slide-menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.slide-menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.has-sub > .sub-menu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-8px);
+    visibility: hidden;
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.35s;
+}
+
+/* Dropdown open */
+.has-sub.is-open > .sub-menu {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
 }
 
 @media (max-width:480px){
@@ -3662,57 +3718,3 @@ a.tocify-title:hover{
     }
 }
 
-/* Hamburger button */
-.slide-menu-toggle {
-    position: relative;
-    width: 42px;
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-/* Hamburger lines */
-.slide-menu-toggle span {
-    width: 24px;
-    height: 2px;
-    background: currentColor;
-    display: block;
-    transition: transform 0.25s ease, opacity 0.2s ease;
-}
-
-/* Turn hamburger into X when menu is open */
-.slide-menu-toggle[aria-expanded="true"] span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-
-.slide-menu-toggle[aria-expanded="true"] span:nth-child(2) {
-    opacity: 0;
-}
-
-.slide-menu-toggle[aria-expanded="true"] span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-.has-sub > .sub-menu {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transform: translateY(-8px);
-    visibility: hidden;
-    transition:
-        max-height 0.35s ease,
-        opacity 0.25s ease,
-        transform 0.25s ease,
-        visibility 0.35s;
-}
-
-/* Dropdown open */
-.has-sub.is-open > .sub-menu {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-}
