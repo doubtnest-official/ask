@@ -1,0 +1,285 @@
+:root {
+  color-scheme: light;
+  --ink: #17243a;
+  --muted: #667085;
+  --blue: #1769e0;
+  --blue-dark: #0f4fb0;
+  --blue-soft: #e9f2ff;
+  --line: #d9e0ea;
+  --surface: #ffffff;
+  --background: #f3f7fc;
+  --danger: #b42318;
+  --shadow: 0 24px 60px rgba(30, 74, 130, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px 16px;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 10%, rgba(54, 139, 255, 0.12), transparent 28rem),
+    radial-gradient(circle at 92% 90%, rgba(79, 209, 197, 0.1), transparent 25rem),
+    var(--background);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.signup-box {
+  width: min(100%, 470px);
+  padding: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #3187f4, #1254be);
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(23, 105, 224, 0.28);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 0.77rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 5vw, 2.35rem);
+  letter-spacing: -0.04em;
+}
+
+.intro {
+  margin: 10px 0 28px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.field + .field {
+  margin-top: 17px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  min-height: 49px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  outline: none;
+  color: var(--ink);
+  background: #fbfcfe;
+  font: inherit;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+input::placeholder {
+  color: #98a2b3;
+}
+
+input:focus {
+  border-color: var(--blue);
+  background: var(--surface);
+  box-shadow: 0 0 0 4px var(--blue-soft);
+}
+
+input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+.form-message {
+  min-height: 20px;
+  margin: 12px 0 -2px;
+  color: var(--danger);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.primary-button,
+.google-button {
+  width: 100%;
+  min-height: 50px;
+  border-radius: 11px;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.primary-button {
+  margin-top: 14px;
+  border: 0;
+  color: #fff;
+  background: var(--blue);
+  box-shadow: 0 5px 0 var(--blue-dark);
+}
+
+.primary-button:hover,
+.google-button:hover {
+  transform: translateY(-2px);
+}
+
+.primary-button:hover {
+  background: #216fdf;
+}
+
+.primary-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--blue-dark);
+}
+
+.primary-button:disabled,
+.google-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+  transform: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 27px 0 18px;
+  color: #98a2b3;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #e6ebf2;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.google-button:hover {
+  border-color: #b8c4d4;
+  background: #f9fbfd;
+}
+
+.login-copy {
+  margin: 23px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+a {
+  color: var(--blue);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(241, 247, 254, 0.82);
+  backdrop-filter: blur(5px);
+}
+
+.loading-overlay[hidden] {
+  display: none;
+}
+
+.loading-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 20px;
+  border: 1px solid #e5ebf3;
+  border-radius: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgba(30, 74, 130, 0.12);
+  font-weight: 700;
+}
+
+.spinner {
+  width: 19px;
+  height: 19px;
+  border: 3px solid #cfe0fa;
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: spin 800ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 18px 12px;
+  }
+
+  .signup-box {
+    padding: 28px 22px;
+    border-radius: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
